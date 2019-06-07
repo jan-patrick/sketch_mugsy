@@ -1,6 +1,16 @@
 {
-  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Artboard History",
+  "description": "Let's you brew your coffee by your Mugsy inside Sketch.",
+  "author": "Jan Schneider",
+  "authorEmail": "hello@jan-patrick.de",
+  "homepage": "https://github.com/jan-patrick/sketch_mugsy",
+  "compatibleVersion": "54.1",
+  "bundleVersion": 1,
+  "version": "0.1.1",
+  "identifier": "com.github.jan-patrick.sketch_mugsy",
   "icon": "icon.png",
+  "suppliesData": false,
+  "$schema": "https://raw.githubusercontent.com/BohemianCoding/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
   "commands": [
     {
       "name": "☕️ Coffee now!",

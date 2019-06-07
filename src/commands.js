@@ -74,17 +74,18 @@ export function setKey() {
         return
       }
       else {
-        while(value.contains(".")){
+        while(value.includes(".")){
           value = value.replace(".", "")
         }
-        while(value.contains(" ")){
-          value = value.replace(".", "")
+        while(value.includes(" ")){
+          value = value.replace(" ", "")
         }
         if(value.length <= 5){
           value = ""
         }
         mugsy.key = value
         setSetting("Mugsy", mugsy)
+        sendMessageToBottom("Key saved successfully.")
       }
     }
   )

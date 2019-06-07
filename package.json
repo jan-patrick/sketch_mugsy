@@ -1,12 +1,12 @@
 {
-  "name": "mugsy",
+  "name": "Mugsy",
   "description": "",
   "version": "0.1.0",
   "engines": {
     "sketch": ">=49.0"
   },
   "skpm": {
-    "name": "mugsy",
+    "name": "Mugsy",
     "manifest": "src/manifest.json",
     "main": "mugsy.sketchplugin",
     "assets": [
