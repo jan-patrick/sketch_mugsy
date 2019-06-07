@@ -3,15 +3,30 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "my-command",
-      "identifier": "mugsy.my-command-identifier",
-      "script": "./my-command.js"
+      "name": "☕️ Coffee now!",
+      "identifier": "mugsy.coffeNow",
+      "script": "./commands.js",
+      "shortcut": "ctrl + c",
+      "handler": "coffeeNow",
+      "icon": "icons/coffeeNow.png",
+      "iconDark": "icons/coffeeNowDark.png",
+      "description": "Brews a coffee right away"
+    },
+    {
+      "script": "./commands.js",
+      "name": "ckeck if Mugsy already exists and is saved",
+      "handlers": {
+        "actions": {
+          "Startup": "checkIfAllThisExists"
+        }
+      },
+      "identifier": "Mugsy-action-listener-identifier-StartUp"
     }
   ],
   "menu": {
-    "title": "mugsy",
+    "title": "Mugsy",
     "items": [
-      "mugsy.my-command-identifier"
+      "mugsy.coffeNow"
     ]
   }
 }
