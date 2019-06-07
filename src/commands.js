@@ -45,8 +45,10 @@ export function checkIfAllThisExists() {
 }
 
 export function coffeeNow() {
+  var mugsy = getSavedSetting("Mugsy")
+  var urlString = "https://cloud.heymugsy.com/sys/userInt/listener.php?key=" + mugsy.key
   $.ajax({
-    url: "https://cloud.heymugsy.com/sys/userInt/listener.php?key=",
+    url: urlString,
     type: "POST",
     data: { action: 'callingPhpFunction' },
     success: function (response) {
@@ -72,8 +74,15 @@ export function setKey() {
         return
       }
       else {
-        value = value.replace(".", "")
-        value = value.replace(" ", "")
+        while(value.contains(".")){
+          value = value.replace(".", "")
+        }
+        while(value.contains(" ")){
+          value = value.replace(".", "")
+        }
+        if(value.length <= 5){
+          value = ""
+        }
         mugsy.key = value
         setSetting("Mugsy", mugsy)
       }
