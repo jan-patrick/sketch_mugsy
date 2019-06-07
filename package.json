@@ -23,5 +23,8 @@
   "devDependencies": {
     "@skpm/builder": "^0.7.0"
   },
-  "author": "jan-patrick <jan.schneider@hfg-gmuend.de>"
+  "author": "jan-patrick <jan.schneider@hfg-gmuend.de>",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }

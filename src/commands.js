@@ -46,15 +46,9 @@ export function checkIfAllThisExists() {
 
 export function coffeeNow() {
   var mugsy = getSavedSetting("Mugsy")
-  var urlString = "https://cloud.heymugsy.com/sys/userInt/listener.php?key=" + mugsy.key
-  $.ajax({
-    url: urlString,
-    type: "POST",
-    data: { action: 'callingPhpFunction' },
-    success: function (response) {
-      sendErrorMessage(response)
-    }
-  })
+  var urlString = "Open this link in your browser" + "\n\n" + "https://cloud.heymugsy.com/sys/userInt/listener.php?key=" + mugsy.key
+  sendErrorMessage(urlString)
+  sendMessageToBottom("This does not work at the moment.")
 }
 
 export function setKey() {
