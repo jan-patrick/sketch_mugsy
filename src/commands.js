@@ -41,11 +41,47 @@ function checkIfMugsyAlreadySaved() {
 }
 
 export function checkIfAllThisExists() {
-  sendErrorMessage("coffee")
   checkIfMugsyAlreadySaved()
 }
 
 export function coffeeNow() {
+  $.ajax({
+    url: "https://cloud.heymugsy.com/sys/userInt/listener.php?key=",
+    type: "POST",
+    data: { action: 'callingPhpFunction' },
+    success: function (response) {
+      sendErrorMessage(response)
+    }
+  })
+}
+
+export function setKey() {
+  var mugsy = getSavedSetting("Mugsy")
+  var string = mugsy.key
+  if(string.length <= 1){
+    string = "Enter here"
+  }
+  UI.getInputFromUser(
+    "What's the integration key you generated for this plugin?",
+    {
+      initialValue: string,
+    },
+    (err, value) => {
+      if (err) {
+        // most likely the user canceled the input
+        return
+      }
+      else {
+        value = value.replace(".", "")
+        value = value.replace(" ", "")
+        mugsy.key = value
+        setSetting("Mugsy", mugsy)
+      }
+    }
+  )
+}
+
+export function showMugsyObject() {
   var sketch = require('sketch/dom')
   var mugsy = getSavedSetting("Mugsy")
   const options = { formats: 'json', output: false }

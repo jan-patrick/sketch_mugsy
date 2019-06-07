@@ -13,6 +13,24 @@
       "description": "Brews a coffee right away"
     },
     {
+      "name": "Set integration key",
+      "identifier": "mugsy.setKey",
+      "script": "./commands.js",
+      "handler": "setKey",
+      "icon": "icons/setKey.png",
+      "iconDark": "icons/setKeyDark.png",
+      "description": "Set the key of your personal mugsy integration."
+    },
+    {
+      "name": "Show saved data",
+      "identifier": "mugsy.showObj",
+      "script": "./commands.js",
+      "handler": "showMugsyObject",
+      "icon": "icons/showObj.png",
+      "iconDark": "icons/showObjDark.png",
+      "description": "Displays all local saved data."
+    },
+    {
       "script": "./commands.js",
       "name": "ckeck if Mugsy already exists and is saved",
       "handlers": {
@@ -26,7 +44,10 @@
   "menu": {
     "title": "Mugsy",
     "items": [
-      "mugsy.coffeNow"
+      "mugsy.coffeNow",
+      "-",
+      "mugsy.setKey",
+      "mugsy.showObj"
     ]
   }
 }
