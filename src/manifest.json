@@ -6,7 +6,7 @@
   "homepage": "https://github.com/jan-patrick/sketch_mugsy",
   "compatibleVersion": "54.1",
   "bundleVersion": 1,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "identifier": "com.github.jan-patrick.sketch_mugsy",
   "icon": "icon.png",
   "suppliesData": false,
