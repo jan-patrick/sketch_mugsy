@@ -53,7 +53,7 @@ export function checkIfAllThisExists() {
 
 export function coffeeNow() {
   var mugsy = getSavedSetting("Mugsy")
-  if(mugsy.key.length<=1){
+  if (mugsy.key.length <= 1) {
     setKey()
   }
   var urlString = "https://cloud.heymugsy.com/sys/userInt/listener.php?key=" + mugsy.key
@@ -64,38 +64,38 @@ export function coffeeNow() {
       'Accept': 'application/json',
       "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
     },
-    method:'POST',
+    method: 'POST',
     body: 'foo=bar&lorem=ipsum'
   };
   fetch(urlString, payload)
-  .then(
-    function(response) {
-      if (response.status !== 200) {
-        //sendErrorMessage('Looks like there was a problem. Status Code:\n\n' + response.status);
-        sendMessageToBottom("This does not work at the moment: " + response.status)
-        return;
+    .then(
+      function (response) {
+        if (response.status !== 200) {
+          //sendErrorMessage('Looks like there was a problem. Status Code:\n\n' + response.status);
+          sendMessageToBottom("This does not work at the moment: " + response.status)
+          return;
+        }
+        //sendErrorMessage(objectToJson(response))
+        response.json().then(function (data) {
+          //sendErrorMessage(data)
+          sendErrorMessage(data)
+        })
+        response.text().then(function (text) {
+          //sendErrorMessage(text)
+          sendMessageToBottom(text)
+        })
       }
-      //sendErrorMessage(objectToJson(response))
-      response.json().then(function(data) {
-        //sendErrorMessage(data)
-        sendErrorMessage(data)
-      })
-      response.text().then(function (text) {
-        //sendErrorMessage(text)
-        sendMessageToBottom(text)
-      })
-    }
-  )
-  .catch(function(err) {
-    //sendErrorMessage('Fetch Error:\n\n' + err)
-    sendMessageToBottom("This does not work at the moment: " + err)
-  })
+    )
+    .catch(function (err) {
+      //sendErrorMessage('Fetch Error:\n\n' + err)
+      sendMessageToBottom("This does not work at the moment: " + err)
+    })
 }
 
 export function setKey() {
   var mugsy = getSavedSetting("Mugsy")
   var string = mugsy.key
-  if(string.length <= 1){
+  if (string.length <= 1) {
     string = "Enter here"
   }
   UI.getInputFromUser(
@@ -109,25 +109,21 @@ export function setKey() {
         return
       }
       else {
-        while(value.includes(".")){
+        while (value.includes(".")) {
           value = value.replace(".", "")
         }
-        while(value.includes(" ")){
+        while (value.includes(" ")) {
           value = value.replace("", "");
         }
-        if(value.length <= 10){
-          value = mugsy.key
-          if (value<=10) {
-            value = ""
-          }
+        if (value.length >= 10) {
+          mugsy.key = value
         }
-        mugsy.key = value
-        setSetting("Mugsy", mugsy)
-        if(value.length>=10){
-        sendMessageToBottom("Key saved successfully.")
-      }else{
-        sendMessageToBottom("Something went wrong with your inserted key.")
-      }
+        if (value.length >= 10) {
+          setSetting("Mugsy", mugsy)
+          sendMessageToBottom("Key updated successfully.")
+        } else {
+          sendMessageToBottom("The inserted key does not match the requirements.")
+        }
       }
     }
   )
