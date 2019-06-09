@@ -62,21 +62,25 @@ export function coffeeNow() {
   .then(
     function(response) {
       if (response.status !== 200) {
-        sendErrorMessage('Looks like there was a problem. Status Code:\n\n' + response.status);
+        //sendErrorMessage('Looks like there was a problem. Status Code:\n\n' + response.status);
+        sendMessageToBottom("This does not work at the moment: " + response.status)
         return;
       }
-
-      // Examine the text in the response
+      //sendErrorMessage(objectToJson(response))
       response.json().then(function(data) {
-        sendErrorMessage(data);
-      });
-      sendErrorMessage(objectToJson(response))
+        //sendErrorMessage(data)
+        sendErrorMessage(data)
+      })
+      response.text().then(function (text) {
+        //sendErrorMessage(text)
+        sendMessageToBottom(text)
+      })
     }
   )
   .catch(function(err) {
-    sendErrorMessage('Fetch Error:\n\n' + err);
+    //sendErrorMessage('Fetch Error:\n\n' + err)
+    sendMessageToBottom("This does not work at the moment: " + err)
   });
-  sendMessageToBottom("This does not work at the moment.")
 }
 
 export function setKey() {
