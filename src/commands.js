@@ -1,4 +1,5 @@
 import sketch from 'sketch'
+import { SSL_OP_CRYPTOPRO_TLSEXT_BUG } from 'constants';
 var UI = require('sketch/ui')
 var Settings = require('sketch/settings')
 
@@ -46,9 +47,34 @@ export function checkIfAllThisExists() {
 
 export function coffeeNow() {
   var mugsy = getSavedSetting("Mugsy")
-  var urlString = "Open this link in your browser" + "\n\n" + "https://cloud.heymugsy.com/sys/userInt/listener.php?key=" + mugsy.key
-  sendErrorMessage(urlString)
-  sendMessageToBottom("This does not work at the moment.")
+  var urlString = "https://cloud.heymugsy.com/sys/userInt/listener.php?key=" + mugsy.key
+  //sendErrorMessage(urlString)
+  let payload = {
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    method:'POST',
+    body: {'my':'stuff'}
+  };
+  fetch('urlString', payload)
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        sendErrorMessage('Looks like there was a problem. Status Code: ' + response.status);
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        sendErrorMessage(data);
+      });
+    }
+  )
+  .catch(function(err) {
+    sendErrorMessage('Fetch Error :-S' + err);
+  });
+  //sendMessageToBottom("This does not work at the moment.")
 }
 
 export function setKey() {
