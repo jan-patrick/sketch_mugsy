@@ -1,5 +1,5 @@
 {
-  "name": "Artboard History",
+  "name": "Mugsy",
   "description": "Let's you brew your coffee by your Mugsy inside Sketch.",
   "author": "Jan Schneider",
   "authorEmail": "hello@jan-patrick.de",
@@ -20,7 +20,7 @@
       "handler": "coffeeNow",
       "icon": "icons/coffeeNow.png",
       "iconDark": "icons/coffeeNowDark.png",
-      "description": "Brews a coffee right away"
+      "description": "Brews a fresh cup of coffee using your last cup's settings."
     },
     {
       "name": "Set integration key",
