@@ -52,16 +52,17 @@ export function coffeeNow() {
   let payload = {
     headers: {
       'Content-Type': 'application/json',
-      'Accept': 'application/json'
+      'Accept': 'application/json',
+      "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
     },
     method:'POST',
-    body: {'my':'stuff'}
+    body: 'foo=bar&lorem=ipsum'
   };
-  fetch('urlString', payload)
+  fetch(urlString, payload)
   .then(
     function(response) {
       if (response.status !== 200) {
-        sendErrorMessage('Looks like there was a problem. Status Code: ' + response.status);
+        sendErrorMessage('Looks like there was a problem. Status Code:\n\n' + response.status);
         return;
       }
 
@@ -69,12 +70,13 @@ export function coffeeNow() {
       response.json().then(function(data) {
         sendErrorMessage(data);
       });
+      sendErrorMessage(objectToJson(response))
     }
   )
   .catch(function(err) {
-    sendErrorMessage('Fetch Error :-S' + err);
+    sendErrorMessage('Fetch Error:\n\n' + err);
   });
-  //sendMessageToBottom("This does not work at the moment.")
+  sendMessageToBottom("This does not work at the moment.")
 }
 
 export function setKey() {
