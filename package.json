@@ -26,5 +26,9 @@
   "author": "jan-patrick <jan.schneider@hfg-gmuend.de>",
   "dependencies": {
     "request": "^2.88.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jan-patrick/sketch_mugsy.git"
   }
 }
