@@ -53,6 +53,9 @@ export function checkIfAllThisExists() {
 
 export function coffeeNow() {
   var mugsy = getSavedSetting("Mugsy")
+  if(mugsy.key.length<=1){
+    setKey()
+  }
   var urlString = "https://cloud.heymugsy.com/sys/userInt/listener.php?key=" + mugsy.key
   //sendErrorMessage(urlString)
   let payload = {
@@ -86,7 +89,7 @@ export function coffeeNow() {
   .catch(function(err) {
     //sendErrorMessage('Fetch Error:\n\n' + err)
     sendMessageToBottom("This does not work at the moment: " + err)
-  });
+  })
 }
 
 export function setKey() {
@@ -110,14 +113,21 @@ export function setKey() {
           value = value.replace(".", "")
         }
         while(value.includes(" ")){
-          value = value.replace(" ", "")
+          value = value.replace("", "");
         }
-        if(value.length <= 5){
-          value = ""
+        if(value.length <= 10){
+          value = mugsy.key
+          if (value<=10) {
+            value = ""
+          }
         }
         mugsy.key = value
         setSetting("Mugsy", mugsy)
+        if(value.length>=10){
         sendMessageToBottom("Key saved successfully.")
+      }else{
+        sendMessageToBottom("Something went wrong with your inserted key.")
+      }
       }
     }
   )
