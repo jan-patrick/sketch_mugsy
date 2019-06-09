@@ -41,6 +41,12 @@ function checkIfMugsyAlreadySaved() {
   //sendErrorMessage(objectToJson(getSavedSetting("ArtboardHistory")))
 }
 
+function resetAllSetSettings() {
+  setSetting("Mugsy", "")
+  newMugsyObject()
+  sendMessageToBottom("Mugsy connection is successfully reset.")
+}
+
 export function checkIfAllThisExists() {
   checkIfMugsyAlreadySaved()
 }
@@ -123,4 +129,21 @@ export function showMugsyObject() {
   const options = { formats: 'json', output: false }
   const sketchJSON = sketch.export(mugsy, options)
   sendErrorMessage(objectToJson(sketchJSON))
+}
+
+export function userResetAllSetSettings() {
+  UI.getInputFromUser(
+    "Are you sure you want to reset your Mugsy connection?",
+    {
+      description: "This will delete all saved keys.\n\n Click \"Ok\" if you want to proceed and \"Cancel\" if not.",
+      initialValue: '-',
+    },
+    (err, value) => {
+      if (err) {
+        // most likely the user canceled the input
+        return
+      }
+      // if clicked ok reset
+      resetAllSetSettings()
+    })
 }

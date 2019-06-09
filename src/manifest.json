@@ -41,6 +41,15 @@
       "description": "Displays all local saved data."
     },
     {
+      "name": "Reset local data",
+      "identifier": "mugsy.resetObj",
+      "script": "./commands.js",
+      "handler": "userResetAllSetSettings",
+      "icon": "icons/resetObj.png",
+      "iconDark": "icons/resetObjDark.png",
+      "description": "This will reset all stored data (including keys)."
+    },
+    {
       "script": "./commands.js",
       "name": "ckeck if Mugsy already exists and is saved",
       "handlers": {
@@ -57,7 +66,8 @@
       "mugsy.coffeNow",
       "-",
       "mugsy.setKey",
-      "mugsy.showObj"
+      "mugsy.showObj",
+      "mugsy.resetObj"
     ]
   }
 }
