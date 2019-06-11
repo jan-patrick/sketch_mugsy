@@ -21,6 +21,52 @@
   </a>
 </p>
 
+## Functions
+<table style="width:100%">
+  <tr>
+    <th></th>
+    <th>☕️ Coffee now!</th>
+    <th>Set integration key</th>
+    <th>Show saved data</th> 
+    <th>Reset local data</th>
+  </tr>
+  <tr>
+    <td>Status</td>
+    <td>✅*</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>Runner icon</td>
+    <td><p align="center"><img src="https://raw.githubusercontent.com/jan-patrick/sketch_mugsy/master/assets/icons/coffeeNow.png"></p></td>
+    <td><p align="center"><img src="https://raw.githubusercontent.com/jan-patrick/sketch_mugsy/master/assets/icons/setKey.png"></p></td>
+    <td><p align="center"><img src="https://raw.githubusercontent.com/jan-patrick/sketch_mugsy/master/assets/icons/showObj.png"></p></td>
+    <td><p align="center"><img src="https://raw.githubusercontent.com/jan-patrick/sketch_mugsy/master/assets/icons/resetObj.png"></p></td>
+  </tr>
+  <tr style="background-color: #000000">
+    <td>Runner icon dark</td>
+    <td><p align="center"><img src="https://raw.githubusercontent.com/jan-patrick/sketch_mugsy/master/assets/icons/coffeeNowDark.png"></p></td>
+    <td><p align="center"><img src="https://raw.githubusercontent.com/jan-patrick/sketch_mugsy/master/assets/icons/setKeyDark.png"></p></td>
+    <td><p align="center"><img src="https://raw.githubusercontent.com/jan-patrick/sketch_mugsy/master/assets/icons/showObjDark.png"></p></td>
+    <td><p align="center"><img src="https://raw.githubusercontent.com/jan-patrick/sketch_mugsy/master/assets/icons/resetObjDark.png"></p></td>
+  </tr>
+  <tr>
+    <td>Shortcut</td>
+    <td>opt + C</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
+
+*This plugin is not tested with a real Mugsy yet.
+
+Feel free to create an [issue](https://github.com/jan-patrick/sketch_mugsy/issues) if something does not work probably or if you have a feature request.
+
+Shortcut:
+opt (⌥) + C
+
 ## Installation
 
 - [Download](../../releases/latest/download/mugsy.sketchplugin.zip) the latest release of the plugin

@@ -16,7 +16,7 @@
       "name": "☕️ Coffee now!",
       "identifier": "mugsy.coffeNow",
       "script": "./commands.js",
-      "shortcut": "alt + c",
+      "shortcut": "opt + c",
       "handler": "coffeeNow",
       "icon": "icons/coffeeNow.png",
       "iconDark": "icons/coffeeNowDark.png",
