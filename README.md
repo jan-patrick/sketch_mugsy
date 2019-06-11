@@ -9,12 +9,8 @@
   <a href="https://www.sketch.com/updates/">
     <img src="https://img.shields.io/badge/latest%20tested%20compatible%20Sketch%20version-55.1-brightgreen.svg">
   </a>
-  <a href="https://sketchrunner.com/">
-    <img src="https://img.shields.io/badge/latest%20tested%Mugsy%20version-not%20yet-yellow.svg">
-  </a>
-  <a href="https://sketchrunner.com/">
-    <img src="https://img.shields.io/badge/latest%20tested%MugsyCloud%20version-2.0-brightgreen.svg">
-  </a>
+    <img src="https://img.shields.io/badge/latest%20tested%20Mugsy%20version-none-yellow.svg">
+    <img src="https://img.shields.io/badge/latest%20tested%20Mugsy%20cloud%20version-2.0-brightgreen.svg">
   <a href="https://sketchrunner.com/">
     <img src="https://img.shields.io/badge/Runner%20Pro%20compatible-Yes-brightgreen.svg">
   </a>
