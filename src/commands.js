@@ -99,7 +99,7 @@ export function setKey() {
     string = "Enter here"
   }
   UI.getInputFromUser(
-    "What's the integration key you generated for this plugin?",
+    "What's the integration key you generated in Mugsy's cloud for this plugin?",
     {
       initialValue: string,
     },
@@ -115,10 +115,17 @@ export function setKey() {
         while (value.includes(" ")) {
           value = value.replace("", "");
         }
-        if (value.length >= 10) {
-          mugsy.key = value
+        while (value.includes(",")) {
+          value = value.replace("", "");
+        }
+        while (value.includes("-")) {
+          value = value.replace("", "");
+        }
+        while (value.includes("/")) {
+          value = value.replace("", "");
         }
         if (value.length >= 10) {
+          mugsy.key = value
           setSetting("Mugsy", mugsy)
           sendMessageToBottom("Key updated successfully.")
         } else {
