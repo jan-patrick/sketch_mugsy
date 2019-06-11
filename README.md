@@ -8,6 +8,19 @@
 <p align="center">
   This plugin is not tested with a real Mugsy yet.
 </p>
+<p align="center">
+  <a href="https://www.sketch.com/updates/">
+    <img src="https://img.shields.io/badge/latest%20tested%20compatible%20Sketch%20version-55.1-brightgreen.svg">
+  </a>
+  <a href="https://sketchrunner.com/">
+    <img src="https://img.shields.io/badge/Runner%20Pro%20compatible-Yes-brightgreen.svg">
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/jan-patrick/sketch_mugsy/releases/latest/download/mugsy.sketchplugin.zip">
+    <img src="https://img.shields.io/badge/download-E2909C.svg" width="125">
+  </a>
+</p>
 
 ## Installation
 
