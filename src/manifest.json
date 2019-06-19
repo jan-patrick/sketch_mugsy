@@ -6,7 +6,7 @@
   "homepage": "https://github.com/jan-patrick/sketch_mugsy",
   "compatibleVersion": "54.1",
   "bundleVersion": 1,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "identifier": "com.github.jan-patrick.sketch_mugsy",
   "icon": "icon.png",
   "suppliesData": false,
@@ -16,7 +16,7 @@
       "name": "☕️ Coffee now!",
       "identifier": "mugsy.coffeNow",
       "script": "./commands.js",
-      "shortcut": "opt + c",
+      "shortcut": "cmd + shift + c",
       "handler": "coffeeNow",
       "icon": "icons/coffeeNow.png",
       "iconDark": "icons/coffeeNowDark.png",
@@ -30,6 +30,56 @@
       "icon": "icons/setKey.png",
       "iconDark": "icons/setKeyDark.png",
       "description": "Set the key of your personal mugsy integration."
+    },
+    {
+      "name": "receipe 1",
+      "identifier": "mugsy.receipe1",
+      "script": "./commands.js",
+      "shortcut": "cmd + shift + 1",
+      "handler": "coffeeNow",
+      "icon": "icons/setKey.png",
+      "iconDark": "icons/receipe1.png",
+      "description": "Brews the first stored receipe."
+    },
+    {
+      "name": "receipe 2",
+      "identifier": "mugsy.receipe2",
+      "script": "./commands.js",
+      "shortcut": "cmd + shift + 2",
+      "handler": "coffeeNow",
+      "icon": "icons/setKey.png",
+      "iconDark": "icons/receipe2.png",
+      "description": "Brews the first stored receipe."
+    },
+    {
+      "name": "receipe 3",
+      "identifier": "mugsy.receipe3",
+      "script": "./commands.js",
+      "shortcut": "cmd + shift+ 3",
+      "handler": "coffeeNow",
+      "icon": "icons/setKey.png",
+      "iconDark": "icons/receipe3.png",
+      "description": "Brews the first stored receipe."
+    },
+    {
+      "name": "receipe 4",
+      "identifier": "mugsy.receipe4",
+      "script": "./commands.js",
+      "shortcut": "cmd + shift + 4",
+      "handler": "coffeeNow",
+      "icon": "icons/setKey.png",
+      "iconDark": "icons/receipe4.png",
+      "description": "Brews the first stored receipe."
+    },
+    {
+      "name": "receipe 5",
+      "identifier": "mugsy.receipe5",
+      "script": "./commands.js",
+      "shortcut": "cmd + shift + 5",
+      "handler": "coffeeNow",
+      "icon": "icons/setKey.png",
+      "iconDark": "icons/receipe5.png",
+      "description": "Brews the first stored receipe."
     },
     {
       "name": "Show saved data",
@@ -65,9 +115,20 @@
     "items": [
       "mugsy.coffeNow",
       "-",
-      "mugsy.setKey",
-      "mugsy.showObj",
-      "mugsy.resetObj"
+      "mugsy.receipe1",
+      "mugsy.receipe2",
+      "mugsy.receipe3",
+      "mugsy.receipe4",
+      "mugsy.receipe5",
+      "-",
+      {
+        "title": "Settings",
+        "items": [
+          "mugsy.setKey",
+          "mugsy.showObj",
+          "mugsy.resetObj"
+        ]
+      }
     ]
   }
 }

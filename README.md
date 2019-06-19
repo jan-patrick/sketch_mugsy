@@ -53,7 +53,7 @@
   </tr>
   <tr>
     <td>Shortcut</td>
-    <td>opt + C</td>
+    <td>cmd + shift + C</td>
     <td>-</td>
     <td>-</td>
     <td>-</td>
@@ -65,7 +65,7 @@
 Feel free to create an [issue](https://github.com/jan-patrick/sketch_mugsy/issues) if something does not work probably or if you have a feature request.
 
 Shortcut:
-opt (⌥) + C
+cmd + shift + C
 
 ## Installation
 
