@@ -32,64 +32,64 @@
       "description": "Set the key of your personal mugsy integration."
     },
     {
-      "name": "Choose receipe",
-      "identifier": "mugsy.choosereceipe",
+      "name": "Choose recipe",
+      "identifier": "mugsy.chooserecipe",
       "script": "./commands.js",
       "shortcut": "cmd + shift + x",
       "handler": "coffeeNow",
-      "icon": "icons/receipe1.png",
-      "iconDark": "icons/receipe1Dark.png",
-      "description": "Lets you choose a receipe you want to brew."
+      "icon": "icons/recipe1.png",
+      "iconDark": "icons/recipe1Dark.png",
+      "description": "Lets you choose a recipe you want to brew."
     },
     {
       "name": "1",
-      "identifier": "mugsy.receipe1",
+      "identifier": "mugsy.recipe1",
       "script": "./commands.js",
       "shortcut": "cmd + shift + 1",
       "handler": "coffeeNow",
-      "icon": "icons/receipe1.png",
-      "iconDark": "icons/receipe1Dark.png",
-      "description": "Brews the first stored receipe."
+      "icon": "icons/recipe1.png",
+      "iconDark": "icons/recipe1Dark.png",
+      "description": "Brews the first stored recipe."
     },
     {
       "name": "2",
-      "identifier": "mugsy.receipe2",
+      "identifier": "mugsy.recipe2",
       "script": "./commands.js",
       "shortcut": "cmd + shift + 2",
       "handler": "coffeeNow",
-      "icon": "icons/receipe2.png",
-      "iconDark": "icons/receipe2Dark.png",
-      "description": "Brews the second stored receipe."
+      "icon": "icons/recipe2.png",
+      "iconDark": "icons/recipe2Dark.png",
+      "description": "Brews the second stored recipe."
     },
     {
       "name": "3",
-      "identifier": "mugsy.receipe3",
+      "identifier": "mugsy.recipe3",
       "script": "./commands.js",
       "shortcut": "cmd + shift+ 3",
       "handler": "coffeeNow",
-      "icon": "icons/receipe3.png",
-      "iconDark": "icons/receipe3Dark.png",
-      "description": "Brews the third stored receipe."
+      "icon": "icons/recipe3.png",
+      "iconDark": "icons/recipe3Dark.png",
+      "description": "Brews the third stored recipe."
     },
     {
       "name": "4",
-      "identifier": "mugsy.receipe4",
+      "identifier": "mugsy.recipe4",
       "script": "./commands.js",
       "shortcut": "cmd + shift + 4",
       "handler": "coffeeNow",
-      "icon": "icons/receipe4.png",
-      "iconDark": "icons/receipe4Dark.png",
-      "description": "Brews the fourth stored receipe."
+      "icon": "icons/recipe4.png",
+      "iconDark": "icons/recipe4Dark.png",
+      "description": "Brews the fourth stored recipe."
     },
     {
       "name": "5",
-      "identifier": "mugsy.receipe5",
+      "identifier": "mugsy.recipe5",
       "script": "./commands.js",
       "shortcut": "cmd + shift + 5",
       "handler": "coffeeNow",
-      "icon": "icons/receipe5.png",
-      "iconDark": "icons/receipe5Dark.png",
-      "description": "Brews the fifth stored receipe."
+      "icon": "icons/recipe5.png",
+      "iconDark": "icons/recipe5Dark.png",
+      "description": "Brews the fifth stored recipe."
     },
     {
       "name": "Show saved data",
@@ -125,14 +125,14 @@
     "items": [
       "mugsy.coffeNow",
       {
-        "title": "Receipes",
+        "title": "Recipes",
         "items": [
-          "mugsy.choosereceipe",
-          "mugsy.receipe1",
-          "mugsy.receipe2",
-          "mugsy.receipe3",
-          "mugsy.receipe4",
-          "mugsy.receipe5"
+          "mugsy.chooserecipe",
+          "mugsy.recipe1",
+          "mugsy.recipe2",
+          "mugsy.recipe3",
+          "mugsy.recipe4",
+          "mugsy.recipe5"
         ]
       },
       "-",

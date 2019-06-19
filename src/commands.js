@@ -1,5 +1,4 @@
 import sketch from 'sketch'
-import { SSL_OP_CRYPTOPRO_TLSEXT_BUG } from 'constants';
 var UI = require('sketch/ui')
 var Settings = require('sketch/settings')
 
@@ -28,7 +27,7 @@ function newMugsyObject() {
   var mugsy = {
     key: "",
     mugsySettings: [],
-    receipes: []
+    recipes: []
   }
   setSetting("Mugsy", mugsy)
 }
@@ -38,7 +37,7 @@ function checkIfMugsyAlreadySaved() {
   if (typeof a != "object") {
     newMugsyObject()
   }
-  //sendErrorMessage(objectToJson(getSavedSetting("ArtboardHistory")))
+  //sendErrorMessage(objectToJson(getSavedSetting("Mugsy")))
 }
 
 function resetAllSetSettings() {
