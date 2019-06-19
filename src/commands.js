@@ -27,8 +27,8 @@ function objectToJson(obj) {
 function newMugsyObject() {
   var mugsy = {
     key: "",
-    machineSettings: [], // 1 month as standard
-    recipes: []
+    mugsySettings: [],
+    receipes: []
   }
   setSetting("Mugsy", mugsy)
 }
