@@ -128,6 +128,7 @@
         "title": "Recipes",
         "items": [
           "mugsy.chooserecipe",
+          "-",
           "mugsy.recipe1",
           "mugsy.recipe2",
           "mugsy.recipe3",
