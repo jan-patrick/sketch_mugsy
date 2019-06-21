@@ -114,8 +114,8 @@
       "identifier": "mugsy.tutorial",
       "script": "./commands.js",
       "handler": "showKeyTutorial",
-      "icon": "icons/resetObj.png",
-      "iconDark": "icons/resetObjDark.png",
+      "icon": "icons/help.png",
+      "iconDark": "icons/helpDark.png",
       "description": "Opens the official tutorial on how to create a key."
     },
     {
@@ -123,8 +123,8 @@
       "identifier": "mugsy.website",
       "script": "./commands.js",
       "handler": "showWebsite",
-      "icon": "icons/resetObj.png",
-      "iconDark": "icons/resetObjDark.png",
+      "icon": "icons/help.png",
+      "iconDark": "icons/helpDark.png",
       "description": "Opens the Website (official Github repository) of Mugsy-plugin."
     },
     {
@@ -132,8 +132,8 @@
       "identifier": "mugsy.issue",
       "script": "./commands.js",
       "handler": "showIssues",
-      "icon": "icons/resetObj.png",
-      "iconDark": "icons/resetObjDark.png",
+      "icon": "icons/help.png",
+      "iconDark": "icons/helpDark.png",
       "description": "Opens the issue overview of Mugsy-plugin."
     },
     {
