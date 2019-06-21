@@ -40,6 +40,10 @@ function checkIfMugsyAlreadySaved() {
   //sendErrorMessage(objectToJson(getSavedSetting("Mugsy")))
 }
 
+function openUrlInBrowser(url) {
+  NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString(url));
+}
+
 function resetAllSetSettings() {
   setSetting("Mugsy", "")
   newMugsyObject()
@@ -141,6 +145,18 @@ export function showMugsyObject() {
   const options = { formats: 'json', output: false }
   const sketchJSON = sketch.export(mugsy, options)
   sendErrorMessage(objectToJson(sketchJSON))
+}
+
+export function showKeyTutorial() {
+  openUrlInBrowser("https://www.heymugsy.com/blog/2019/5/8/custom-integrations-tutorial");
+}
+
+export function showWebsite() {
+  openUrlInBrowser("https://github.com/jan-patrick/sketch_mugsy");
+}
+
+export function showIssues() {
+  openUrlInBrowser("https://github.com/jan-patrick/sketch_mugsy/issues");
 }
 
 export function userResetAllSetSettings() {
