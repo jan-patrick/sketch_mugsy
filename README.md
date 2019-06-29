@@ -73,6 +73,9 @@ cmd + shift + C
 - Un-zip
 - Double-click on mugsy.sketchplugin
 
+#### Create integration key
+Follow this [tutorial](https://www.heymugsy.com/blog/2019/5/8/custom-integrations-tutorial) to create an integration key.
+
 ## Install with Sketch Runner (Pro)
 With Sketch Runner, just go to the `install` command and search for `Mugsy`. Runner allows you to manage plugins and do much more to speed up your workflow in Sketch. [Download Runner here](http://www.sketchrunner.com).
 <br/><br/><a href="http://bit.ly/SketchRunnerWebsite"><img src="http://bit.ly/RunnerBadgeBlue" width=140></a>
